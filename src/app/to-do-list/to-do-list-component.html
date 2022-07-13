@@ -1,0 +1,34 @@
+<input
+  placeholder="{{itemPlaceHolder}}"
+  [(ngModel)]="task.title"
+  (keydown.enter)="onKeydown($event)"
+/>
+<div class="buttonlist">
+  <button (click)="getList()">Toggle list</button>
+  <button (click)="clearList()">Clear list</button>
+  <!-- <button (click)="getList()">Add item</button> -->
+  <p>List length: {{displayList.length}}</p>
+</div>
+<ng-container>
+  <ul>
+    <li
+      *ngFor="let item of displayList; index as i;"
+      (click)="toggleDone(i, item)"
+      [ngClass]="!item.done? '':'doneItem'"
+    >
+      {{item.title}}
+      <span>
+        <i
+          class="fa fa-trash-o"
+          style="color: red"
+          (click)="delete($event, item, i)"
+        ></i>
+        <i
+          class="fa fa-pencil"
+          style="color: rgb(125, 175, 212)"
+          (click)="edit($event, item)"
+        ></i>
+      </span>
+    </li>
+  </ul>
+</ng-container>

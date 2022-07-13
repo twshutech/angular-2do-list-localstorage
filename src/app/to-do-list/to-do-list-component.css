@@ -1,0 +1,50 @@
+input {
+  width: 90%;
+  font-size: 18px;
+  font-weight: 100;
+  margin: auto;
+  display: block;
+  position: relative;
+  border-bottom: 1px rgb(50, 62, 78) solid;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  outline: none !important;
+}
+
+.buttonlist {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+}
+
+ul {
+  width: 90%;
+  list-style-type: none;
+  margin: auto;
+  padding: 0;
+}
+
+li {
+  padding: 1%;
+  display: flex;
+  justify-content: space-between;
+}
+li span {
+  display: none;
+  justify-content: space-between;
+  gap: 5px;
+  z-index: 9999;
+}
+li:hover {
+  background-color: rgb(230, 232, 233);
+}
+li:hover span {
+  display: flex;
+}
+.doneItem {
+  color: rgb(199, 203, 207);
+  text-decoration: line-through;
+}

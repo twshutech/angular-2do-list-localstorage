@@ -1,0 +1,10 @@
+.main-title {
+  font-size: 100px;
+  color: rgb(50, 62, 78);
+  font-family: sans-serif;
+  font-weight: 100;
+  text-align: center;
+}
+.main-title span {
+  font-weight: 900;
+}
