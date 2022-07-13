@@ -4,7 +4,9 @@
   (keydown.enter)="onKeydown($event)"
 />
 <div class="buttonlist">
-  <button (click)="getList()">Toggle list</button>
+  <button (click)="getList()">
+    {{displayState? "Hide Done":"Display all"}}
+  </button>
   <button (click)="clearList()">Clear list</button>
   <!-- <button (click)="getList()">Add item</button> -->
   <p>List length: {{displayList.length}}</p>

@@ -2,6 +2,8 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { toDoItem, toDoItemList } from '../models/todolist';
 import { LocalService } from '../localService';
 import { ListProcessService } from '../tools/list-process.service';
+import {ThemePalette} from '@angular/material/core';
+
 
 @Component({
   selector: 'app-to-do-list',
